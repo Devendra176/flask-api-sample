@@ -2,10 +2,10 @@ from flask import Blueprint
 
 from flask_restx import Api
 
-from .views.users import user_api as user
-from .views.user_images_upload import user_images
-from .views.extra_api import public_api as public_api
-from .test import api as view_api
+from project.views.users import user_api as user
+from project.views.user_images_upload import user_images
+from project.views.extra_api import public_api as public_api
+from project.test import api as view_api
 
 # Creating blueprint for Flask API
 user_api  = Blueprint('api', __name__)

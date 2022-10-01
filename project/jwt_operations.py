@@ -4,7 +4,7 @@ from flask_restx import abort
 
 from flask_jwt_extended import JWTManager
 
-from .models import User
+from project.models import User
 
 
 

@@ -3,7 +3,7 @@ from flask_restx import Resource,Namespace,fields
 from flask_restx.marshalling import marshal
 from project.methods import s3Operations
 from project.models import User, ProfileImages
-from api_response.response_field import registered_user_response
+from project.api_response.response_field import registered_user_response
 public_api = Namespace(name='Public API', path='/public', description='Some Public API')
 
 
