@@ -45,4 +45,3 @@ api.add_namespace(public_api)
 
 #adding Namespacees with API this one id for Extra 
 api.add_namespace(view_api)
-
