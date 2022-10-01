@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, "/home/cis/Desktop/aws/project")
 import re
 
 from flask import Flask
@@ -15,19 +13,19 @@ def create_app():
     app = Flask(__name__)
     CORS(app)
     if app.config["ENV"] == "production":
-        app.config.from_object("config.ProductionConfig")
+        app.config.from_object("project.config.ProductionConfig")
     else:
-        app.config.from_object("config.DevelopmentConfig")
+        app.config.from_object("project.config.DevelopmentConfig")
     with app.app_context():
 
 
         db = MongoEngine()
         db.init_app(app)
 
-        from .api import user_api
+        from project.api import user_api
         app.register_blueprint(user_api)
 
-        from .jwt_operations import jwt
+        from project.jwt_operations import jwt
         jwt.init_app(app)
     
         return app

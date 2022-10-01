@@ -12,7 +12,7 @@ from project.models import ImageUpload, User
 from project.methods import s3Operations, rename_file
 from project.custom_validation import allowed_file
 from project.parsearguments import ParserArgument
-from api_response.response_field import user_image_response
+from project.api_response.response_field import user_image_response
 
 # Namespace define for User Image operations
 user_images = Namespace(name='User images', path='/user/images',description='User Images operations.')

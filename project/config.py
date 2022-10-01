@@ -1,4 +1,6 @@
 from datetime import timedelta
+
+
 class Config(object):
     DEBUG = False
     TESTING = False
@@ -16,8 +18,12 @@ class Config(object):
                         'port': 'example'
                         }
 
+
+
 class ProductionConfig(Config):
     pass
+
+
 
 class DevelopmentConfig(Config):
     DEBUG = True
@@ -32,6 +38,8 @@ class DevelopmentConfig(Config):
                         'host': 'localhost',
                         'port': 27017
                         }
+
+
 
 class TestingConfig(Config):
     

@@ -12,7 +12,7 @@ from project.models import User, ProfileImages
 from project.jwt_operations import jwt_redis_blocklist
 
 from project.parsearguments import ParserArgument
-from api_response.resource_field import registration_resource,update_userdeatils_resource
+from project.api_response.resource_field import registration_resource,update_userdeatils_resource
 from project.methods import rename_file
 from project.custom_validation import ( validate_email,
                                         validate_password,
@@ -21,7 +21,7 @@ from project.custom_validation import ( validate_email,
                                         validate_country,
                                         allowed_file,
                                         )
-from api_response.response_field import (
+from project.api_response.response_field import (
     registered_user_response,
     profile_data_response,
     )

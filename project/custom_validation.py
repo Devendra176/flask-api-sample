@@ -1,6 +1,6 @@
 from flask_restx import abort
 from project import ALLOWED_EXTENSIONS, EMAIL_REGEX
-from .models import User
+from project.models import User
 
 
 def allowed_file(filename):
